@@ -313,7 +313,7 @@ function App() {
                   </div>
                   <div className="credit-info">
                     <h4>Althea Marie P. Baron</h4>
-                    <p className="credit-role">Former President (AY 2023-2025)</p>
+                    <p className="credit-role">Former President (AY 2022-2025)</p>
                     <p className="credit-description">
                       Appointed by Dr. Arao, she led the club through its formative years, 
                       overseeing our growth from a small group to a thriving community. 
