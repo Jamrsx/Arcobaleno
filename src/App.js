@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
   const images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
 
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#credits">Legacy</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -245,6 +247,142 @@ function App() {
         </div>
       </section>
 
+      {/* Credits Section */}
+      <section id="credits" className="section credits">
+        <div className="section-container">
+          <div className="section-header">
+            <h2 className="section-title artistic-text">Our Legacy</h2>
+            <div className="section-divider"></div>
+          </div>
+          
+          <div className="credits-content">
+            <div className="credits-history">
+              <div className="history-card">
+                <div className="history-header">
+                  <img src="OCC logo.png" alt="OCC Logo" className="history-logo" />
+                  <h3>Our Journey Since 2022</h3>
+                </div>
+                <div className="history-text">
+                  <p>
+                    CAMPO ARCOBALENO was founded in 2022 with the vision of Dr. Arao, who recognized the need for a creative outlet 
+                    that would help students be involved with art and creativity. What started as a small group of 15 passionate members 
+                    has grown into a thriving community that celebrates diversity and artistic expression.
+                  </p>
+                  <p>
+                    From our humble beginnings with DIY henna tattoos and acrylic body paint (though not recommended!), 
+                    to our current success with professional henna solutions and temporary tattoo stickers, 
+                    we've come a long way thanks to the unwavering support of our OCC community.
+                  </p>
+                  <p>
+                    Special thanks to our first SAS Coordinator, Sir Glenn Roa, whose keen eye for arts and literacy 
+                    helped every club within OCC be known, and to the CSG-SBO for their continued funding and support.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="credits-people">
+              <div className="credits-grid">
+                <div className="credit-card founder">
+                  <div className="credit-image">
+                    <img 
+                      src="doc dee.jpg" 
+                      alt="Dr. Arao" 
+                      className="credit-img clickable-image"
+                      onClick={() => setSelectedImage({src: "doc dee.jpg", alt: "Dr.Dolorita Nacua Arao"})}
+                    />
+                  </div>
+                  <div className="credit-info">
+                    <h4>Dr.Dolorita Nacua Arao</h4>
+                    <p className="credit-role">Club Founder & Mentor</p>
+                    <p className="credit-description">
+                      The visionary behind CAMPO ARCOBALENO who saw the need for creative expression 
+                      and helped establish our artistic community.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="credit-card president">
+                  <div className="credit-image">
+                    <img 
+                      src="althea.jpg" 
+                      alt="Althea Marie P. Baron" 
+                      className="credit-img clickable-image"
+                      onClick={() => setSelectedImage({src: "althea.jpg", alt: "Althea Marie P. Baron"})}
+                    />
+                  </div>
+                  <div className="credit-info">
+                    <h4>Althea Marie P. Baron</h4>
+                    <p className="credit-role">Former President (AY 2023-2025)</p>
+                    <p className="credit-description">
+                      Appointed by Dr. Arao, she led the club through its formative years, 
+                      overseeing our growth from a small group to a thriving community. 
+                      Her dedication to DIY henna solutions and creative activities 
+                      helped establish our signature artistic identity.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="credit-card coordinator">
+                  <div className="credit-image">
+                    <img 
+                      src="glenn.jpg" 
+                      alt="Sir Glenn Roa" 
+                      className="credit-img clickable-image"
+                      onClick={() => setSelectedImage({src: "glenn.jpg", alt: "Sir Glenn L. Roa"})}
+                    />
+                  </div>
+                  <div className="credit-info">
+                    <h4>Sir Glenn L. Roa</h4>
+                    <p className="credit-role">First SAS Coordinator</p>
+                    <p className="credit-description">
+                      Our very first SAS Coordinator who helped every club within OCC be known. 
+                      With his keen eye for arts and literacy, he supported our growth and 
+                      even invited our club to judge his classes' Art Culmination Program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="credits-message">
+                <div className="message-card">
+                  <h4>🌟 The Original Members</h4>
+                  <div className="og-members">
+                    <img 
+                      src="the og.jpg" 
+                      alt="Original CAMPO ARCOBALENO Members" 
+                      className="og-image clickable-image"
+                      onClick={() => setSelectedImage({src: "the og.jpg", alt: "Original CAMPO ARCOBALENO Members"})}
+                    />
+                    <div className="og-text">
+                      <p>
+                        Our founding members who started this beautiful journey in 2022. 
+                        From a small group of 15 passionate individuals, we've grown into a thriving community 
+                        that celebrates creativity, diversity, and artistic expression.
+                      </p>
+                      <p>
+                        These original members laid the foundation for what CAMPO ARCOBALENO has become today - 
+                        a place where every OCCian can find their creative voice and make colorful memories together.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="credits-reminder">
+                <div className="reminder-card">
+                  <h4>🌟 Our Philosophy</h4>
+                  <p>
+                    <strong>CAMPO ARCOBALENO</strong> (English: Rainbow Camp) means <strong>"Diversity with one view"</strong>. 
+                    Let us be reminded to not rush ourselves and to not compare it with others as we are unique in our own time. 💕❤️
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="section contact">
         <div className="section-container">
@@ -310,6 +448,23 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedImage(null)}>
+              ✕
+            </button>
+            <img 
+              src={selectedImage.src} 
+              alt={selectedImage.alt} 
+              className="modal-image"
+            />
+            <p className="modal-caption">{selectedImage.alt}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
